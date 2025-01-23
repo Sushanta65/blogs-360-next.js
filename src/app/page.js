@@ -1,9 +1,13 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 async function fetchPosts() {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  const res = await fetch("https://jsonplaceholder.typicode.com/posts");
   return res.json();
 }
+
+export const metadata = {
+  title: "Home | Blogs-360",
+};
 
 export default async function HomePage() {
   const posts = await fetchPosts();
@@ -26,7 +30,9 @@ export default async function HomePage() {
               >
                 {post.title}
               </Link>
-              <Link href={`/blog/${post.id}`} className='btn'>View Details</Link>
+              <Link href={`/blog/${post.id}`} className="btn">
+                View Details
+              </Link>
             </li>
           ))}
         </ul>

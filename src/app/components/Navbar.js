@@ -10,25 +10,20 @@ export default function Navbar() {
   return (
     <header className="bg-gray-800 text-white">
       <nav className="container mx-auto flex items-center justify-between p-4">
-        
         <div className="flex items-center">
-          
           <span className="text-xl font-semibold">Blog 360</span>
         </div>
 
-       
         <div className="hidden md:flex items-center space-x-6">
           <Link href="/" className="hover:underline">
             Home
           </Link>
-          
-            <Link href="/profile" className="hover:underline">
-              Profile
-            </Link>
-          
+
+          <Link href="/profile" className="hover:underline">
+            Profile
+          </Link>
         </div>
 
-        
         <div className="flex items-center space-x-4">
           {isAuthenticated ? (
             <>
@@ -51,16 +46,14 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
       <div className="md:hidden flex justify-between px-4 py-2 bg-gray-700">
         <Link href="/" className="hover:underline">
           Home
         </Link>
-        
-          <Link href="/profile" className="hover:underline">
-            Profile
-          </Link>
-        
+
+        <Link href="/profile" className="hover:underline">
+          Profile
+        </Link>
       </div>
     </header>
   );
