@@ -26,7 +26,7 @@ export default async function HomePage() {
             >
               <Link
                 href={`/blog/${post.id}`}
-                className="text-lg text-blue-600 hover:underline"
+                className="text-lg text-blue-600 hover:underline capitalize"
               >
                 {post.title}
               </Link>
